@@ -1,19 +1,22 @@
 export const profile = {
   name: "Muhammad Irsyad Dimas Abdillah",
-  role: "Personal Portfolio",
+  role: "Mahasiswa TI-3F",
   location: "Indonesia",
   siteUrl: "https://heydims.my.id",
   summary:
-    "Personal website untuk memperkenalkan profil, karya, dan ruang digital Dimas secara singkat, bersih, dan mudah diakses.",
+    "Saya adalah mahasiswa kelas TI-3F. Website ini dibuat sebagai halaman profil sederhana untuk tugas mata kuliah Cloud Computing.",
   about: {
     title: "Tentang",
-    headline: "Merapikan ide besar menjadi pengalaman web yang tenang.",
+    headline: "Profil singkat.",
     description:
-      "Dimas fokus pada front-end yang konsisten, aksesibel, dan mudah dirawat. Ia senang merapikan struktur, konten, dan detail visual agar produk terasa jelas sejak layar pertama.",
+      "Halaman ini berisi pengenalan singkat tentang saya.",
     highlights: [
-      { label: "Fokus", value: "Frontend, UI system, performance" },
-      { label: "Tools", value: "Next.js, TypeScript, Tailwind CSS" },
-      { label: "Kolaborasi", value: "Design, product, content" },
+      { label: "Kelas", value: "TI-3F" },
+      { label: "Mata Kuliah", value: "Cloud Computing" },
+      {
+        label: "Topik",
+        value: "Teknologi Kontainer: Efisiensi dan Portabilitas Aplikasi",
+      },
     ],
   },
   githubUrl: "https://github.com/Dimas0824",

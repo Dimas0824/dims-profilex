@@ -14,19 +14,19 @@ describe("Landing page", () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText(/Personal website untuk memperkenalkan profil/i),
+      screen.getByText(/Saya adalah mahasiswa kelas TI-3F/i),
     ).toBeInTheDocument();
   });
 
   it("renders profile action links", () => {
     render(<Home />);
 
-    expect(screen.getByRole("link", { name: "Visit Website" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Website" })).toHaveAttribute(
       "href",
       "https://heydims.my.id",
     );
 
-    expect(screen.getByRole("link", { name: "GitHub Profile" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "GitHub" })).toHaveAttribute(
       "href",
       "https://github.com/Dimas0824",
     );
@@ -40,11 +40,14 @@ describe("Landing page", () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText(/Merapikan ide besar menjadi pengalaman web/i),
+      screen.getByText(/Profil singkat untuk tugas Cloud Computing/i),
     ).toBeInTheDocument();
 
+    expect(screen.getByText("Cloud Computing")).toBeInTheDocument();
     expect(
-      screen.getByText("Frontend, UI system, performance"),
+      screen.getByText(
+        "Teknologi Kontainer: Efisiensi dan Portabilitas Aplikasi",
+      ),
     ).toBeInTheDocument();
   });
 });

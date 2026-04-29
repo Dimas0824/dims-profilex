@@ -15,7 +15,7 @@ function ProfileVisual() {
             DA
           </div>
           <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
-            heydims.my.id
+            Tugas Cloud Computing
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export function ProfileLandingPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Visit Website
+              Website
             </a>
             <a
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 text-zinc-800 transition hover:border-zinc-950 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-950 focus:ring-offset-2"
@@ -69,7 +69,7 @@ export function ProfileLandingPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub Profile
+              GitHub
             </a>
           </div>
         </div>
