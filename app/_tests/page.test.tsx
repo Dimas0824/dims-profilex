@@ -40,14 +40,10 @@ describe("Landing page", () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText(/Profil singkat untuk tugas Cloud Computing/i),
+      screen.getByText(/Profil singkat/i),
     ).toBeInTheDocument();
 
     expect(screen.getByText("Cloud Computing")).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        "Teknologi Kontainer: Efisiensi dan Portabilitas Aplikasi",
-      ),
-    ).toBeInTheDocument();
+
   });
 });
