@@ -76,6 +76,50 @@ export function ProfileLandingPage() {
 
         <ProfileVisual />
       </section>
+
+      <section
+        id="about"
+        aria-labelledby="about-heading"
+        className="mx-auto w-full max-w-6xl px-6 pb-20 sm:px-8"
+      >
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-zinc-200 bg-white/90 p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-12">
+          <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-teal-100/70" />
+          <div className="absolute -bottom-24 -left-16 h-60 w-60 rounded-full bg-amber-100/70" />
+
+          <div className="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <h2
+                id="about-heading"
+                className="text-xs font-semibold uppercase tracking-[0.35em] text-zinc-500"
+              >
+                {profile.about.title}
+              </h2>
+              <p className="mt-4 text-3xl font-semibold text-zinc-950 sm:text-4xl">
+                {profile.about.headline}
+              </p>
+              <p className="mt-5 text-base leading-7 text-zinc-600">
+                {profile.about.description}
+              </p>
+            </div>
+
+            <dl className="grid gap-4">
+              {profile.about.highlights.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-[1.5rem] border border-zinc-200 bg-white/80 p-5 shadow-[0_12px_30px_rgba(15,23,42,0.08)]"
+                >
+                  <dt className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+                    {item.label}
+                  </dt>
+                  <dd className="mt-2 text-lg font-semibold text-zinc-900">
+                    {item.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

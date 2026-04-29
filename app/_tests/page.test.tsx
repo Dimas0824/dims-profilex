@@ -31,4 +31,20 @@ describe("Landing page", () => {
       "https://github.com/Dimas0824",
     );
   });
+
+  it("renders about section content", () => {
+    render(<Home />);
+
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Tentang" }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/Merapikan ide besar menjadi pengalaman web/i),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText("Frontend, UI system, performance"),
+    ).toBeInTheDocument();
+  });
 });
