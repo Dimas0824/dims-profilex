@@ -3,13 +3,13 @@ import { profile } from "@/app/_data/profile";
 function ProfileVisual() {
   return (
     <aside
-      className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_24px_80px_rgba(15,23,42,0.12)]"
+      className="relative overflow-hidden rounded-4xl border border-zinc-200 bg-white p-8 shadow-[0_24px_80px_rgba(15,23,42,0.12)]"
       aria-label="Profile summary card"
     >
       <div className="absolute right-0 top-0 h-36 w-36 bg-teal-100" />
       <div className="absolute bottom-0 left-0 h-32 w-32 bg-amber-100" />
 
-      <div className="relative flex min-h-[420px] flex-col justify-between">
+      <div className="relative flex min-h-105 flex-col justify-between">
         <div>
           <div className="flex h-24 w-24 items-center justify-center rounded-[1.75rem] bg-zinc-950 text-3xl font-semibold text-white">
             DA
