@@ -14,21 +14,36 @@ describe("Landing page", () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText(/Personal website untuk memperkenalkan profil/i),
+      screen.getByText(/Saya adalah mahasiswa kelas TI-3F/i),
     ).toBeInTheDocument();
   });
 
   it("renders profile action links", () => {
     render(<Home />);
 
-    expect(screen.getByRole("link", { name: "Visit Website" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Website" })).toHaveAttribute(
       "href",
       "https://heydims.my.id",
     );
 
-    expect(screen.getByRole("link", { name: "GitHub Profile" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "GitHub" })).toHaveAttribute(
       "href",
       "https://github.com/Dimas0824",
     );
+  });
+
+  it("renders about section content", () => {
+    render(<Home />);
+
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Tentang" }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/Profil singkat/i),
+    ).toBeInTheDocument();
+
+    expect(screen.getByText("Cloud Computing")).toBeInTheDocument();
+
   });
 });
