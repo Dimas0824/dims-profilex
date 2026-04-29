@@ -3,11 +3,11 @@ import { profile } from "@/app/_data/profile";
 function ProfileVisual() {
   return (
     <aside
-      className="relative overflow-hidden rounded-4xl border border-zinc-200 bg-white p-8 shadow-[0_24px_80px_rgba(15,23,42,0.12)]"
+      className="relative overflow-hidden rounded-4xl border border-zinc-200 bg-white p-8 shadow-[0_24px_80px_rgba(15,23,42,0.12)] animate-fade-up"
       aria-label="Profile summary card"
     >
-      <div className="absolute right-0 top-0 h-36 w-36 bg-teal-100" />
-      <div className="absolute bottom-0 left-0 h-32 w-32 bg-amber-100" />
+      <div className="absolute right-0 top-0 h-36 w-36 bg-teal-100 animate-float-soft" />
+      <div className="absolute bottom-0 left-0 h-32 w-32 bg-amber-100 animate-float-slower" />
 
       <div className="relative flex min-h-105 flex-col justify-between">
         <div>
@@ -35,12 +35,16 @@ function ProfileVisual() {
 
 export function ProfileLandingPage() {
   return (
-    <main className="min-h-screen bg-[#f7f4ef] text-zinc-900">
+    <main className="relative min-h-screen bg-gradient-to-br from-[#fdf7f0] via-[#f7f4ef] to-[#f1ece4] text-zinc-900">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        <div className="absolute -left-40 top-16 h-72 w-72 rounded-full bg-teal-100/50 blur-3xl animate-float-soft" />
+        <div className="absolute -right-28 top-1/2 h-80 w-80 rounded-full bg-amber-100/60 blur-3xl animate-float-slower" />
+      </div>
       <section
         id="landing"
-        className="mx-auto grid min-h-screen w-full max-w-6xl items-center gap-12 px-6 py-12 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:py-16"
+        className="relative z-10 mx-auto grid min-h-screen w-full max-w-6xl items-center gap-12 px-6 py-12 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:py-16"
       >
-        <div>
+        <div className="animate-fade-up">
           <div className="inline-flex rounded-full border border-teal-200 bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-800">
             {profile.role}
           </div>
@@ -80,11 +84,11 @@ export function ProfileLandingPage() {
       <section
         id="about"
         aria-labelledby="about-heading"
-        className="mx-auto w-full max-w-6xl px-6 pb-20 sm:px-8"
+        className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 sm:px-8"
       >
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-zinc-200 bg-white/90 p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-12">
-          <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-teal-100/70" />
-          <div className="absolute -bottom-24 -left-16 h-60 w-60 rounded-full bg-amber-100/70" />
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-zinc-200 bg-white/90 p-8 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-12 animate-fade-up">
+          <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-teal-100/70 animate-float-soft" />
+          <div className="absolute -bottom-24 -left-16 h-60 w-60 rounded-full bg-amber-100/70 animate-float-slower" />
 
           <div className="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
