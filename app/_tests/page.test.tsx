@@ -43,7 +43,36 @@ describe("Landing page", () => {
       screen.getByText(/Profil singkat/i),
     ).toBeInTheDocument();
 
-    expect(screen.getByText("Cloud Computing")).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "Teknologi Kontainer: Efisiensi dan Portabilitas Aplikasi",
+      ),
+    ).toBeInTheDocument();
+  });
 
+  it("renders tech interests section", () => {
+    render(<Home />);
+
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Minat Teknologi" }),
+    ).toBeInTheDocument();
+
+    expect(screen.getByText("IoT Dasar")).toBeInTheDocument();
+  });
+
+  it("renders projects section", () => {
+    render(<Home />);
+
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Proyek" }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("link", { name: "Profil Heydims" }),
+    ).toHaveAttribute("href", "https://heydims.my.id");
+
+    expect(
+      screen.getByRole("link", { name: "Portofolio GitHub" }),
+    ).toHaveAttribute("href", "https://github.com/Dimas0824");
   });
 });

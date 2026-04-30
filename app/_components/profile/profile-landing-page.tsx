@@ -1,4 +1,6 @@
 import { profile } from "@/app/_data/profile";
+import { ProfileProjects } from "@/app/_components/profile/profile-projects";
+import { ProfileTechInterests } from "@/app/_components/profile/profile-tech-interests";
 
 function ProfileVisual() {
   return (
@@ -124,6 +126,9 @@ export function ProfileLandingPage() {
           </div>
         </div>
       </section>
+
+      <ProfileTechInterests />
+      <ProfileProjects />
     </main>
   );
 }
